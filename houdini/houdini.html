@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Houdini 实战</title>
+
+    <style>
+        body {
+            margin: 0;
+            color: #fff;
+            background: #000
+        }
+
+        body::before {
+            background: paint(nigel-sky);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            --star-opacity: 0;
+            --star-density: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>Houdini 实战</div>
+
+    <script>
+        if (!CSS in window || !CSS.paintWorklet) {
+            console.log('您的浏览器不支持houdini');
+        } else {
+            CSS.paintWorklet.addModule('sky.js');
+        }
+
+    </script>
+</body>
+
+</html>
