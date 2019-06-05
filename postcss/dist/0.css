@@ -1,0 +1,14 @@
+/* @custom-selector :--heading h1,h2,h3,h4,h5,h6; */
+:root {
+    --mainColor: yellowgreen;
+}
+
+.c-main .test {
+        color: yellowgreen;
+        color: var(--mainColor);
+    }
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
